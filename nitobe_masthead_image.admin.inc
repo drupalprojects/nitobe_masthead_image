@@ -39,7 +39,7 @@ function nitobe_masthead_image_admin_build_nitobemasthead_add($form_state, $item
   $form['path'] = array(
     '#type' => 'textfield',
     '#title' => t('Path'),
-    '#default_value' => $item ? $item->path : '',
+    '#default_value' => $item ? check_plain($item->path) : '',
     '#description' => t('Use &lt;front&gt; for the front page.'),
   );
 
